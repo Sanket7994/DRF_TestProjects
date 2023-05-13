@@ -1,0 +1,33 @@
+Django Structure:
+
+• __init__.py indicates that the files in the folder are part of a Python package. Without
+this file, we cannot import files from another directory which we will be doing a lot of in
+Django!
+• asgi.py allows for an optional Asynchronous Server Gateway Interface18 to be run
+• settings.py controls our Django project’s overall settings
+• urls.py tells Django which pages to build in response to a browser or URL request
+• wsgi.py stands for Web Server Gateway Interface19 which helps Django serve our eventual
+web pages
+
+Each new pages app file does:
+
+Code
+├── pages
+│ ├── __init__.py
+│ ├── admin.py
+│ ├── apps.py
+│ ├── migrations
+│ │ └── __init__.py
+│ ├── models.py
+│ ├── tests.py
+│ └── views.py
+
+
+• admin.py is a configuration file for the built-in Django Admin app
+• apps.py is a configuration file for the app itself
+• migrations/ keeps track of any changes to our models.py file so it stays in sync with our
+database
+• models.py is where we define our database models which Django automatically translates
+into database tables
+• tests.py is for app-specific tests
+• views.py is where we handle the request/response logic for our web app

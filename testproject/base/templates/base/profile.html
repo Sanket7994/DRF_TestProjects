@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'main.html' %}
+{% block content %}
+<html lang="en"></html>
+<style>
+    .profile-container  {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+</style>
+<body>
+    <h1>{{user.username}}</h1>
+    <div class="profile-container">
+        <div>{% include 'base/topics_component.html' %}</div>
+        <div>
+            <h3>Joined Rooms</h3>
+            {% include 'base/feed_component.html' %}
+        </div>
+        <div>
+            <h3>Recent Activities</h3>
+            <hr>
+            {% include 'base/activity_component.html' %}
+        </div>
+    </div>
+</body>
+{% endblock %}
